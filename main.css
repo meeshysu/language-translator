@@ -1,0 +1,52 @@
+body {
+    background-color: turquoise;
+}
+
+h2 {
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;
+}
+
+#textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px black solid;
+    box-shadow: 1px 1px 1px gray;
+    margin: auto;
+    align-content: center;
+}
+
+label,
+textArea {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.hungarian {
+    padding: auto;
+    margin: 20px;
+}
+
+.gaelic {
+    padding: auto;
+    margin: 20px;   
+}
+
+.finnish {
+    padding: auto;
+    margin: 20px;
+}
