@@ -1,47 +1,54 @@
-
-const languageTranslator = {
-    hungarian: [
-        {eng: "merry", hung: "vidám"},
-        {eng: "christmas", hung: "karácsony"},
-        {eng: "and", hung: "és"},
-        {eng: "happy", hung: "boldog"},
-        {eng: "new", hung: "új"},
-        {eng: "year", hung: "év"}
-    ],
-    gaelic: [
-        {eng: "merry", gael: "nollaig"},
-        {eng: "christmas", gael: "chridheil"},
-        {eng: "and", gael: "agus"},
-        {eng: "happy", gael: "sona"},
-        {eng: "new", gael: "ùr"},
-        {eng: "year", gael: "bliadhna"}
-    ],
-    finnish: [
-        {eng: "merry", finn: "iloinen"},
-        {eng: "christmas", finn: "joulu"},
-        {eng: "and", finn: "ja"},
-        {eng: "happy", finn: "onnellinen"},
-        {eng: "new", finn: "uusi"},
-        {eng: "year", finn: "vuosi"}
-    ],
+let hungarianLanguage = {
+    "merry": "vidám",
+    "christmas": "karácsony",
+    "and": "és",
+    "happy": "boldog",
+    "new": "új",
+    "year": "év"
 };
+
+let gaelicLanguage = {
+    "merry": "nollaig",
+    "christmas": "chridheil",
+    "and": "agus",
+    "happy": "sona",
+    "new": "ùr",
+    "year": "vuosi",
+};
+
+let finnishLanguage = {
+    "merry": "iloinen",
+    "christmas": "joulu",
+    "and": "ja",
+    "happy": "onnellinen",
+    "new": "uusi",
+    "year": "vuosi",
+};
+
 
 
 const printToDom = (stringToPrint, divId) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = stringToPrint;
 };
-const languageTextArea = document.getElementById('languageTextArea');
 
-
-const hungarianArray = () => {
-    for (i = 0; i < languageTranslator.hungarian.length; i++){
-    if (languageTranslator.hungarian[i].eng === languageTextArea.value) {
-        printToDom(languageTranslator.hungarian[i].hung, 'text')
+let outputString = '';
+    const newStringBuilderLang = (language) => {
+        outputString = '';
+        let inputString1 = document.getElementById('inputTextArea').value.toLowerCase();
+        let inputStringArray = inputString1.split(' ');
+        for (let i = 0; i < inputStringArray.length; i++) {
+            outputString += `${language[inputStringArray[i]]}`;
+            outputString += " ";
+};
+        printToDom(outputString, 'outputTextArea');
     };
-};
-};
 
+let hungarianButton = document.getElementById("hungButton");
+hungarianButton.addEventListener("click", function(){newStringBuilderLang(hungarianLanguage)});
 
-// const buttonElement = document.getElementById('hungarianButton');
-// buttonElement.addEventListener('click', hungarianArray (event));
+let gaelicButton = document.getElementById("gaelButton");
+gaelicButton.addEventListener("click", function(){newStringBuilderLang(gaelicLanguage)});
+
+let finnishButton = document.getElementById("finnButton");
+finnishButton.addEventListener("click", function(){newStringBuilderLang(finnishLanguage)});

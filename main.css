@@ -8,7 +8,7 @@ h2 {
     padding: 20px;
 }
 
-#textarea {
+#englishTranslation {
     padding: 10px;
     border-radius: 5px;
     border: 1px black solid;
@@ -17,16 +17,11 @@ h2 {
     align-content: center;
 }
 
-label,
 textArea {
     display: block;
     text-align: center;
     font-size: 16px;
     letter-spacing: 1px;
-}
-
-label {
-    margin-bottom: 5px;
 }
 
 #buttons {
@@ -36,17 +31,17 @@ label {
     justify-content: center;
 }
 
-.hungarianButton {
+.hungButton {
     padding: auto;
     margin: 20px;
 }
 
-.gaelicButton {
+.gaelButton {
     padding: auto;
     margin: 20px;   
 }
 
-.finnishButton {
+.finnButton {
     padding: auto;
     margin: 20px;
 }
