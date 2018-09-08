@@ -32,19 +32,23 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML = stringToPrint;
 };
 
-let outputStringHung = '';
-    const newStringBuilderHungLang = () => {
-        let inputString1 = document.getElementById('inputTextArea');
-        let inputString = inputString1.value.toLowerCase();
-        let inputStringArray = inputString.split(' ');
+let outputString = '';
+    const newStringBuilderLang = (language) => {
+        outputString = '';
+        let inputString1 = document.getElementById('inputTextArea').value.toLowerCase();
+        let inputStringArray = inputString1.split(' ');
         for (let i = 0; i < inputStringArray.length; i++) {
-            outputStringHung += `${hungarianLanguage[inputStringArray[i]]}`;
-        }
-        printToDom(outputStringHung, 'outputTextArea');
-    }
-
+            outputString += `${language[inputStringArray[i]]}`;
+            outputString += " ";
+};
+        printToDom(outputString, 'outputTextArea');
+    };
 
 let hungarianButton = document.getElementById("hungButton");
-hungarianButton.addEventListener("click", () => {
-    newStringBuilderHungLang();
-});
+hungarianButton.addEventListener("click", function(){newStringBuilderLang(hungarianLanguage)});
+
+let gaelicButton = document.getElementById("gaelButton");
+gaelicButton.addEventListener("click", function(){newStringBuilderLang(gaelicLanguage)});
+
+let finnishButton = document.getElementById("finnButton");
+finnishButton.addEventListener("click", function(){newStringBuilderLang(finnishLanguage)});
