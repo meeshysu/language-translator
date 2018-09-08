@@ -36,17 +36,17 @@ label {
     justify-content: center;
 }
 
-.hungarian {
+.hungarianButton {
     padding: auto;
     margin: 20px;
 }
 
-.gaelic {
+.gaelicButton {
     padding: auto;
     margin: 20px;   
 }
 
-.finnish {
+.finnishButton {
     padding: auto;
     margin: 20px;
 }
