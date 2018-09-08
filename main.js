@@ -44,6 +44,8 @@ let outputString = '';
         printToDom(outputString, 'outputTextArea');
     };
 
+
+
 let hungarianButton = document.getElementById("hungButton");
 hungarianButton.addEventListener("click", function(){newStringBuilderLang(hungarianLanguage)});
 

@@ -1,5 +1,6 @@
 body {
-    background-color: turquoise;
+    background-image: url("https://images.wallpaperscraft.com/image/christmas_decorations_ball_glitter_tinsel_silver_57453_1600x1180.jpg");
+    font-family: 'Noto Serif JP', sans-serif;
 }
 
 h2 {
@@ -8,20 +9,30 @@ h2 {
     padding: 20px;
 }
 
-#englishTranslation {
+#inputTextArea {
     padding: 10px;
     border-radius: 5px;
     border: 1px black solid;
     box-shadow: 1px 1px 1px gray;
+    display: flex;
+    justify-content: space-between;
     margin: auto;
-    align-content: center;
+    font-family: 'Noto Serif JP', sans-serif;
 }
 
-textArea {
-    display: block;
+#outputTextArea {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 40px;
+    border: 1px black solid;
+    max-width: 11%;
+    height: 19%;
+    background-color: white;
+    box-shadow: 1px 1px 1px gray;
+    border-radius: 5px;
+    font-family: 'Noto Serif JP', sans-serif;
     text-align: center;
-    font-size: 16px;
-    letter-spacing: 1px;
 }
 
 #buttons {
@@ -31,17 +42,11 @@ textArea {
     justify-content: center;
 }
 
-.hungButton {
-    padding: auto;
-    margin: 20px;
-}
-
-.gaelButton {
-    padding: auto;
-    margin: 20px;   
-}
-
-.finnButton {
-    padding: auto;
-    margin: 20px;
+#hungButton, #gaelButton, #finnButton {
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid rgba(255,255,255,0);
+    border-radius: 2em;
+    font-weight: 300;
+    background-color:  #D93410;
 }
