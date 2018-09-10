@@ -33,28 +33,28 @@ const printToDom = (stringToPrint, divId) => {
 };
 
 let outputString = '';
-    const newStringBuilderLang = (language) => {
-        outputString = '';
-        let inputString1 = document.getElementById('inputTextArea').value.toLowerCase();
-        let inputStringArray = inputString1.split(' ');
-        for (let i = 0; i < inputStringArray.length; i++) {
-            outputString += `${language[inputStringArray[i]]}`;
-            outputString += " ";
-        if (undefined === language[inputStringArray[i]]){
+const newStringBuilderLang = (language) => {
+    outputString = '';
+    let inputString1 = document.getElementById('inputTextArea').value.toLowerCase();
+    let inputStringArray = inputString1.split(' ');
+    for (let i = 0; i < inputStringArray.length; i++) {
+        outputString += `${language[inputStringArray[i]]}`;
+        outputString += " ";
+        if (undefined === language[inputStringArray[i]]) {
             alert("This word does not exist in this dictionary. Please try again.");
-    }
-        printToDom(outputString, 'outputTextArea'); 
         }
-    };
+        printToDom(outputString, 'outputTextArea');
+    }
+};
 
 
 
 let hungarianButton = document.getElementById("hungButton");
-hungarianButton.addEventListener("click", function(){newStringBuilderLang(hungarianLanguage)});
+hungarianButton.addEventListener("click", function () { newStringBuilderLang(hungarianLanguage) });
 
 let gaelicButton = document.getElementById("gaelButton");
-gaelicButton.addEventListener("click", function(){newStringBuilderLang(gaelicLanguage)});
+gaelicButton.addEventListener("click", function () { newStringBuilderLang(gaelicLanguage) });
 
 let finnishButton = document.getElementById("finnButton");
-finnishButton.addEventListener("click", function(){newStringBuilderLang(finnishLanguage)});
+finnishButton.addEventListener("click", function () { newStringBuilderLang(finnishLanguage) });
 
