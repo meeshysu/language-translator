@@ -39,9 +39,12 @@ let outputString = '';
         let inputStringArray = inputString1.split(' ');
         for (let i = 0; i < inputStringArray.length; i++) {
             outputString += `${language[inputStringArray[i]]}`;
-            outputString += " ";
-};
-        printToDom(outputString, 'outputTextArea');
+            
+        if (undefined === language[inputStringArray[i]]){
+            alert("This word does not exist in this dictionary. Please try again.");
+    }
+        printToDom(outputString, 'outputTextArea'); 
+        }
     };
 
 
@@ -54,3 +57,4 @@ gaelicButton.addEventListener("click", function(){newStringBuilderLang(gaelicLan
 
 let finnishButton = document.getElementById("finnButton");
 finnishButton.addEventListener("click", function(){newStringBuilderLang(finnishLanguage)});
+
