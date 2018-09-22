@@ -42,7 +42,10 @@ const newStringBuilderLang = (language) => {
         outputString += " ";
         if (undefined === language[inputStringArray[i]]) {
             alert("This word does not exist in this dictionary. Please try again.");
+        } else {
+            //print to dom
         }
+
         printToDom(outputString, 'outputTextArea');
     }
 };
