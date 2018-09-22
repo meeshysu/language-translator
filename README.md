@@ -23,3 +23,4 @@ localhost:9999
 ```
 
 - All you need to do is type in a holiday word in English to see if it will translate in one of the 3 listed above. If they do not exist in the bank of words, an alert will appear and tell you so. If it is, the word will be translated below. 
+
